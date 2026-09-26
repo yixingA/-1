@@ -1,0 +1,23 @@
+左右轴
+x=1:1:24
+[AX,H1,H2]=plotyy(x,[Tamb2;Ts2],x,Tamb2-Ts2,'plot');%双轴
+set(AX(1),'XColor','k','YColor','b'); %X轴和第一个Y轴的颜色
+set(AX(2),'XColor','k','YColor','g'); %X轴和第二个Y轴的颜色
+HH1=get(AX(1),'Ylabel');
+set(HH1,'String','温度/℃','color','b','FontSize', 18,'FontName', 'ST'); %第一个Y轴标签的的颜色
+HH2=get(AX(2),'Ylabel');
+set(HH2,'String','降低温度/℃','color','g','FontSize', 18,'FontName', 'ST'); %第二个Y轴标签的的颜色
+
+set(AX(1),'ylim',[-10,18],'ytick',[-10:2:18]); %定第一个Y轴的范围
+set(AX(2),'ylim',[5.5,7],'ytick',[5.5:0.2:7]); %定第二个Y轴的范围
+
+
+set(H1(1),'LineStyle','-','linewidth',1,'color','r'); %a的线型设置
+set(H1(2),'LineStyle','-','linewidth',1,'color','b');%b的线型设置
+set(H2,'LineStyle','-.','linewidth',1,'color','g'); %c的线型设置
+
+legend([H1(1),H1(2),H2],{'环境温度Tamb';'模块表面温度Ts';'降低温度'});
+% Title = title('夏季');
+Xlabel = xlabel('时刻/h');
+set(Xlabel, 'FontSize', 18, 'FontName', 'ST')
+set(Title, 'FontSize', 18, 'FontName', 'ST')
