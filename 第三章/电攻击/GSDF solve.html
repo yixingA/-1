@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+    <meta charset="GB2312">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+            <meta name="applicable-device" content="pc">
+        <meta http-equiv="Cache-Control" content="no-siteapp" /> 
+  <title>CSDN</title> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/detail-64e2d60643.min.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin-yellow/skin-yellow-db01cea9f7.min.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.0/ckeditor/plugins/chart/chart.css" /> 
+  <script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.6.0/ckeditor/plugins/chart/lib/chart.min.js"></script> 
+  <script type="text/javascript" src="https://csdnimg.cn/release/blog_editor_html/release1.6.0/ckeditor/plugins/chart/widget2chart.js"></script> 
+  <script type="text/javascript" src="https://csdnimg.cn/release/phoenix/production/pc_wap_common-f91259fb12.js"></script> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.0/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-dark.css" /> 
+<style>.article-type-img,.operating,.article-info-box,#blogColumnPayAdvert{display:none;}.article-heard-img { width: 20px;height: 20px; margin-top: 6px;}</style>
+ </head> 
+ <body class="nodata "> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-833878f763.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/ck_htmledit_views-833878f763.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/blog_code-c3a0c33d5c.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging-e040f0c7c8.css" /> 
+  <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/chart-3456820cac.css" /> 
+  <div class="main_father clearfix d-flex justify-content-center" style="height:100%;"> 
+   <div class="container clearfix" id="mainBox"> 
+    <div class="space_container"></div> 
+    <main> 
+
+<div class="blog-content-box">
+        <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">电气论文实现：应用转移因子法求解大规模电力网络潮流</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                    <a class="follow-nickName " href="https://blog.csdn.net/kobeyu652453" target="_blank" rel="noopener">总裁余(余登武)</a>
+                    <span class="time">2021-08-22 10:48:23</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="">
+                    <span class="read-count">152</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click="{&quot;mod&quot;:&quot;popu_823&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4232&quot;,&quot;ab&quot;:&quot;new&quot;}">
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">分类专栏：</span>
+                                <a class="tag-link" href="https://blog.csdn.net/kobeyu652453/category_11138699.html" target="_blank" rel="noopener">期刊论文</a>
+                            <span class="label">文章标签：</span>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;电气&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://so.csdn.net/so/search/s.do?q=电气&amp;t=blog&amp;o=vip&amp;s=&amp;l=&amp;f=&amp;viparticle=" target="_blank" rel="noopener">电气</a>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;python&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://www.csdn.net/tags/MtjaQg4sNDk0LWJsb2cO0O0O.html" target="_blank" rel="noopener">python</a>
+                                <a data-report-click="{&quot;mod&quot;:&quot;popu_626&quot;,&quot;spm&quot;:&quot;1001.2101.3001.4223&quot;,&quot;strategy&quot;:&quot;matlab&quot;,&quot;ab&quot;:&quot;new&quot;}" class="tag-link" href="https://www.csdn.net/tags/NtjaIg5sMDYzNC1ibG9n.html" target="_blank" rel="noopener">matlab</a>
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/kobeyu652453/article/details/119848821" target="_blank">https://blog.csdn.net/kobeyu652453/article/details/119848821</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="blogColumnPayAdvert">
+            <div class="column-group">
+                <div class="column-group-item column-group0 column-group-item-one">
+                    <div class="item-l">
+                        <a class="item-target" href="https://blog.csdn.net/kobeyu652453/category_11138699.html" target="_blank" title="期刊论文" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.6332&quot;}">
+                            <img class="item-target" src="https://img-blog.csdnimg.cn/20210616134550415.jpg?x-oss-process=image/resize,m_fixed,h_224,w_224" alt="">
+                            <span class="title item-target">期刊论文</span>
+                        </a>
+                        <span class="dec">专栏收录该内容</span>
+                    </div>
+                    <div class="item-m">
+                        <span>4 篇文章</span>
+                        <span>4 订阅</span>
+                        <span class="old-add-new-box">
+                            <span class="price">￥59.90</span>
+                            <span class="oldprice">￥99.00</span>
+                        </span>
+                    </div>
+                    <div class="item-r">
+                                        <a style="display:none" class="item-target column-studyvip-free studyvip-subscribe column-studyvip-ajax" data-type="true" data-id="11138699">
+                                            <img class="item-target column-studyvip-icon" src="https://csdnimg.cn/release/blogv2/dist/components/img/studyVipIcon.png">会员已订阅
+                                        </a>
+                                        <a style="display:inline-block" class="item-target column-studyvip-free studyvip-unsubscribe column-studyvip-ajax" data-type="false" data-id="11138699">
+                                            <img class="item-target column-studyvip-icon" src="https://csdnimg.cn/release/blogv2/dist/components/img/studyVipIcon.png">会员免费订
+                                        </a>
+                                        <a class="item-target column-studyvip-discount column-studyvip-pass">9折续费</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-1a85854398.css">
+                <div id="content_views" class="markdown_views prism-atom-one-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;个人电气博文目录链接：<a href="https://blog.csdn.net/KOBEYU652453/article/details/117459596">学好电气全靠它，个人电气博文目录（持续更新中…）</a><br> &nbsp;&nbsp;&nbsp;&nbsp;本文给出了转移因子法求解大规模电力网络的潮流。潮流计算方法很多，但我觉得转移因子法思想最简单，转移因子法网上有零星文字讲解原理，但都没有给出计算机程序。<mark>本文通过MATLAB和python 程序 求解6机30节点的电力网络的功率转移因子</mark>。功率转移因子 适合于 关心<mark>输电线路容量</mark>的机组组合和调度问题。<br> &nbsp;&nbsp;&nbsp;&nbsp;核心必要文字加代码共8页。<br> <img src="https://img-blog.csdnimg.cn/d2fa898bdcae4054a1043f89841f436c.png#pic_center" width="50%" height="50%"></p> 
+<hr color="#000000" size="1&quot;"> 
+<p><font color="#999AAA">提示：博文专栏解锁是可以看这个专栏所有文章一年。，花一份钱看多篇文章，划算。</font></p> 
+<p></p>
+<div class="toc">
+ <h3><a name="t0"></a>文章目录</h3>
+ <ul><li><a href="#_16" target="_self">一、通过小网络讲解功率转移因子法原理</a></li><li><ul><li><a href="#1123_18" target="_self">1.算例1（2机3节点）</a></li><li><a href="#2_223_30" target="_self">2 .算例2（2机3节点）</a></li></ul>
+  </li><li><a href="#_46" target="_self">二、程序求解复杂大电力网络的功率转移因子矩阵</a></li><li><ul><li><a href="#1630_47" target="_self">1.数据介绍（6机30节点网络）</a></li><li><a href="#2MATLAB_64" target="_self">2.MATLAB求解</a></li><li><a href="#3python_126" target="_self">3.python求解</a></li></ul>
+  </li><li><a href="#_196" target="_self">总结</a></li></ul>
+</div>
+<p></p> 
+<hr color="#000000" size="1&quot;"> 
+<h1><a name="t1"></a><a id="_16"></a>一、通过小网络讲解功率转移因子法原理</h1> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;原理之前讲过：<a href="https://blog.csdn.net/KOBEYU652453/article/details/119053312">电气：通过转移因子算法求解潮流</a></p> 
+<h2><a name="t2"></a><a id="1123_18"></a>1.算例1（2机3节点）</h2> 
+<img src="https://img-blog.csdnimg.cn/fad7578884be4e65ab758b45515d991a.png#pic_center" width="50%" height="50%"> &nbsp;&nbsp;&nbsp;&nbsp;如图是一个三节点的电力网络。支路参数见图。求解各线路的潮流 
+<img src="https://img-blog.csdnimg.cn/c77c430ea71c40f2ba1cec23afb99d7b.png#pic_center" width="70%" height="70%"> &nbsp;&nbsp;&nbsp;&nbsp;求解步骤如下： 
+<ul><li>第一步：节点功率净输入向量Pij=[PG1,PG2,PG3-PD]，节点1对应PG1，节点2对应PG2，节点3对应PG3-PD</li><li>第二步：取参考节点为1。</li><li>第三步：初始化各节点功率为0，依次往各节点注入1单位功率，让功率从参考节点流出，求各条线路功率。见下表<br> <img src="https://img-blog.csdnimg.cn/ef3569f705ac45079524838c998f9d22.png#pic_center" width="70%" height="70%"></li><li>第四步：得到线路潮流 PL12=0<em>PG1 -2/3</em>PG2-1/3（PG3-PD）。PL13=0<em>PG1-1/3/2</em>PG2-1/3（PG3-PD）。PL23=0<em>PG1+1/3</em>PG2-1/3*(PG3-PD)</li></ul> 
+<h2><a name="t3"></a><a id="2_223_30"></a>2 .算例2（2机3节点）</h2> 
+<img src="https://img-blog.csdnimg.cn/b53627dbd6554093908492c7fe236b13.png#pic_center" width="50%" height="50%"> &nbsp;&nbsp;&nbsp;&nbsp;如图所示的三节点系统中,节点1有两台发电机组，节点2分别有一台发电机组和一个负荷，节点3有一个负荷，三条支路的电抗都为0.25(标幺值)，试求DCPF（转移因子矩阵）中各个矩阵元素的值。 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;求解步骤如下：</p> 
+<ul><li>第一步：节点功率净输入向量Pij=[P11+P12,P2-PD2,-PD3]</li><li>第二步：取节点1为参考节点。</li><li>第三步：初始化各节点功率为0，然后依次往各节点注入1单位功率，求解线路潮流。<br> <img src="https://img-blog.csdnimg.cn/034b437207824565b864e177104ae4bc.png#pic_center" width="70%" height="70%"><br> -得到线路功率<br> <img src="https://img-blog.csdnimg.cn/b2d1deea105740abaeb3d62f159d291a.png#pic_center" width="50%" height="50%"></li></ul> 
+<p>总结：转移因子法就是先确定一个参考节点，然后再其它节点加单位功率，然功率最终从参考节点流出。（计算流程有点像叠加定理。）</p> 
+<h1><a name="t4"></a><a id="_46"></a>二、程序求解复杂大电力网络的功率转移因子矩阵</h1> 
+<h2><a name="t5"></a><a id="1630_47"></a>1.数据介绍（6机30节点网络）</h2> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;某地的网络接线图见图，6机30节点图。这个数据非IEEE30节点数据。<br> <img src="https://img-blog.csdnimg.cn/7c6cb188e96c4f7491848a141592b6c7.jpg#pic_center" width="70%" height="70%"><br> 数据下载链接：<a href="https://download.csdn.net/download/KOBEYU652453/21436133">电力数据-某地 6机30节点数据（机组组合）.zip<br> </a></p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;数据中只考虑了电抗，未考虑电阻。架空线路电抗远大于电阻。电阻可以不考虑。如果有电阻数据，稍微修改下代码即可。<br> &nbsp;&nbsp;&nbsp;&nbsp;机组参数图<br> <img src="https://img-blog.csdnimg.cn/0be25ef7335e4ac8973040b89baaa273.png#pic_center" width="60%" height="60%"></p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;网络参数图<br> <img src="https://img-blog.csdnimg.cn/9be11f0556844248ae0b0ec17a37e6f5.png#pic_center" width="50%" height="50%"></p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;节点负荷曲线预测图<br> <img src="https://img-blog.csdnimg.cn/6b528606faf94116a818c44fc1bd22a9.png#pic_center" width="50%" height="50%"></p> 
+<h2><a name="t6"></a><a id="2MATLAB_64"></a>2.MATLAB求解</h2> 
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;">clear
+clc
+<span class="token operator">%</span><span class="token operator">%</span>系统参数
+<span class="token operator">%</span>所有参数均用有名值表示
+paragen<span class="token operator">=</span>xlsread<span class="token punctuation">(</span><span class="token string">'excel2017'</span><span class="token punctuation">,</span><span class="token string">'机组参数'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+loadcurve<span class="token operator">=</span>xlsread<span class="token punctuation">(</span><span class="token string">'excel2017'</span><span class="token punctuation">,</span><span class="token string">'负荷曲线'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+netpara<span class="token operator">=</span>xlsread<span class="token punctuation">(</span><span class="token string">'excel2017'</span><span class="token punctuation">,</span><span class="token string">'网络参数'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+branch_num<span class="token operator">=</span>size<span class="token punctuation">(</span>netpara<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>网络中的支路
+branch_num<span class="token operator">=</span>branch_num<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span><span class="token number">41</span>条支路数
+<span class="token operator">%</span>机组数
+gennum<span class="token operator">=</span>size<span class="token punctuation">(</span>paragen<span class="token punctuation">)</span><span class="token punctuation">;</span>
+gennum<span class="token operator">=</span>gennum<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>机组数<span class="token number">6</span>个
+<span class="token operator">%</span>节点数
+numnodes<span class="token operator">=</span>size<span class="token punctuation">(</span>loadcurve<span class="token punctuation">)</span><span class="token punctuation">;</span>
+numnodes<span class="token operator">=</span>numnodes<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token operator">%</span><span class="token number">30</span>个节点   
+
+<span class="token operator">%</span>时间范围
+T<span class="token operator">=</span>size<span class="token punctuation">(</span>loadcurve<span class="token punctuation">)</span><span class="token punctuation">;</span>
+T<span class="token operator">=</span>T<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token operator">%</span><span class="token operator">%</span> 直流潮流下的导纳矩阵节点参数初始化
+netpara<span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token operator">/</span>netpara<span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>电抗求倒数成电纳
+slack_bus<span class="token operator">=</span><span class="token number">26</span><span class="token punctuation">;</span><span class="token operator">%</span>按不同的平衡节点号更改 ，我选<span class="token number">26</span>是因为网络图中<span class="token number">26</span>只有一个相连接点，比较简单。
+Y<span class="token operator">=</span>zeros<span class="token punctuation">(</span>numnodes<span class="token punctuation">,</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">%</span><span class="token operator">%</span> 直流潮流的导纳矩阵计算
+<span class="token keyword">for</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">:</span>branch_num 
+    i<span class="token operator">=</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>首节点
+    j<span class="token operator">=</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>尾节点
+    Y<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>导纳矩阵中非对角元素
+    Y<span class="token punctuation">(</span>j<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token operator">=</span> Y<span class="token punctuation">(</span>i<span class="token punctuation">,</span>j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+end
+<span class="token keyword">for</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">:</span>numnodes
+       Y<span class="token punctuation">(</span>k<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">-</span><span class="token builtin">sum</span><span class="token punctuation">(</span>Y<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">%</span>导纳矩阵中的对角元素 
+end
+
+<span class="token operator">%</span>再删除掉平衡节点所在的行与列
+Y<span class="token punctuation">(</span>slack_bus<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+Y<span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">,</span>slack_bus<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token operator">%</span><span class="token operator">%</span> 输出功率转移分布因子<span class="token punctuation">(</span>GSDF<span class="token punctuation">)</span>
+X<span class="token operator">=</span>inv<span class="token punctuation">(</span>Y<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>X为直流潮流下节点导纳矩阵的逆矩阵
+row<span class="token operator">=</span>zeros<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>numnodes<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>numnodes<span class="token operator">-</span><span class="token number">1</span>是因为节点导纳矩阵去掉了平衡节点 shape<span class="token operator">=</span><span class="token number">1</span><span class="token operator">*</span><span class="token number">29</span>
+
+<span class="token operator">%</span>再次引入平衡节点的矩阵值，根据直流潮流定义ΔΘ<span class="token operator">=</span>ΧΔP<span class="token punctuation">,</span>平衡机角度始终为<span class="token number">0</span>，所以所有涉及平衡节点的X均为<span class="token number">0</span>
+X<span class="token operator">=</span><span class="token punctuation">[</span>X<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">:</span>slack_bus<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">)</span><span class="token punctuation">;</span>row<span class="token punctuation">;</span>X<span class="token punctuation">(</span>slack_bus<span class="token punctuation">:</span>numnodes<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token operator">%</span>插入全<span class="token number">0</span>行
+column<span class="token operator">=</span>zeros<span class="token punctuation">(</span>numnodes<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+X<span class="token operator">=</span><span class="token punctuation">[</span>X<span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">:</span>slack_bus<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> column X<span class="token punctuation">(</span><span class="token punctuation">:</span><span class="token punctuation">,</span>slack_bus<span class="token punctuation">:</span>numnodes<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token operator">%</span>插入全<span class="token number">0</span>列
+
+G<span class="token operator">=</span>zeros<span class="token punctuation">(</span>branch_num<span class="token punctuation">,</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>GSDF功率转移矩阵初始化
+<span class="token keyword">for</span> k<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">:</span>branch_num
+    m<span class="token operator">=</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>首端节点
+    n<span class="token operator">=</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>末端节点
+    xk<span class="token operator">=</span>netpara<span class="token punctuation">(</span>k<span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">%</span>支路k的阻抗值
+<span class="token keyword">for</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">:</span>numnodes
+    G<span class="token punctuation">(</span>k<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token operator">=</span><span class="token punctuation">(</span>X<span class="token punctuation">(</span>m<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token operator">-</span>X<span class="token punctuation">(</span>n<span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">*</span>xk<span class="token punctuation">;</span><span class="token operator">%</span>输出功率转移分布因子
+end
+end
+
+<div class="hljs-button {2}" data-title="复制" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;}"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li><li style="color: rgb(153, 153, 153);">19</li><li style="color: rgb(153, 153, 153);">20</li><li style="color: rgb(153, 153, 153);">21</li><li style="color: rgb(153, 153, 153);">22</li><li style="color: rgb(153, 153, 153);">23</li><li style="color: rgb(153, 153, 153);">24</li><li style="color: rgb(153, 153, 153);">25</li><li style="color: rgb(153, 153, 153);">26</li><li style="color: rgb(153, 153, 153);">27</li><li style="color: rgb(153, 153, 153);">28</li><li style="color: rgb(153, 153, 153);">29</li><li style="color: rgb(153, 153, 153);">30</li><li style="color: rgb(153, 153, 153);">31</li><li style="color: rgb(153, 153, 153);">32</li><li style="color: rgb(153, 153, 153);">33</li><li style="color: rgb(153, 153, 153);">34</li><li style="color: rgb(153, 153, 153);">35</li><li style="color: rgb(153, 153, 153);">36</li><li style="color: rgb(153, 153, 153);">37</li><li style="color: rgb(153, 153, 153);">38</li><li style="color: rgb(153, 153, 153);">39</li><li style="color: rgb(153, 153, 153);">40</li><li style="color: rgb(153, 153, 153);">41</li><li style="color: rgb(153, 153, 153);">42</li><li style="color: rgb(153, 153, 153);">43</li><li style="color: rgb(153, 153, 153);">44</li><li style="color: rgb(153, 153, 153);">45</li><li style="color: rgb(153, 153, 153);">46</li><li style="color: rgb(153, 153, 153);">47</li><li style="color: rgb(153, 153, 153);">48</li><li style="color: rgb(153, 153, 153);">49</li><li style="color: rgb(153, 153, 153);">50</li><li style="color: rgb(153, 153, 153);">51</li><li style="color: rgb(153, 153, 153);">52</li><li style="color: rgb(153, 153, 153);">53</li><li style="color: rgb(153, 153, 153);">54</li><li style="color: rgb(153, 153, 153);">55</li><li style="color: rgb(153, 153, 153);">56</li><li style="color: rgb(153, 153, 153);">57</li></ul></pre> 
+<h2><a name="t7"></a><a id="3python_126"></a>3.python求解</h2> 
+<pre class="prettyprint"><code class="prism language-python has-numbering" onclick="mdcp.copyCode(event)" style="position: unset;"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token comment">#读取文件</span>
+paragen<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'excel2017.xls'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'gbk'</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span><span class="token string">'机组参数'</span><span class="token punctuation">)</span><span class="token comment">#机组参数</span>
+loadcurve<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'excel2017.xls'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'gbk'</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span><span class="token string">'负荷曲线'</span><span class="token punctuation">)</span><span class="token comment">#负荷曲线</span>
+netpara<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'excel2017.xls'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'gbk'</span><span class="token punctuation">,</span>sheet_name<span class="token operator">=</span><span class="token string">'网络参数'</span><span class="token punctuation">)</span><span class="token comment">#网络参数</span>
+
+branch_num<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>netpara<span class="token punctuation">)</span><span class="token comment">#支路数41</span>
+gennum<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>paragen<span class="token punctuation">)</span><span class="token comment">#机组数 6</span>
+numnodes<span class="token operator">=</span><span class="token builtin">len</span><span class="token punctuation">(</span>loadcurve<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment">#节点数30</span>
+T<span class="token operator">=</span>np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>loadcurve<span class="token punctuation">)</span><span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment">#时间长度24</span>
+
+<span class="token comment">#直流潮流下的导纳矩阵节点参数初始化</span>
+netpara<span class="token punctuation">[</span><span class="token string">'支路电抗(p.u.)'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1.0</span><span class="token operator">/</span>netpara<span class="token punctuation">[</span><span class="token string">'支路电抗(p.u.)'</span><span class="token punctuation">]</span> <span class="token comment">#电抗求倒数成电纳</span>
+slack_bus<span class="token operator">=</span><span class="token number">25</span> <span class="token comment">#按不同的平衡节点号更改,我取26 python计数从0开始计数。写的是25，其实26  26号节点只有一个相邻节点较为简单</span>
+Y<span class="token operator">=</span>np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span>numnodes<span class="token punctuation">,</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#shape=(30,30)</span>
+
+<span class="token comment">#直流潮流的导纳矩阵计算</span>
+<span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>branch_num<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#遍历每一条支路</span>
+    i <span class="token operator">=</span> netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment">#首节点 #因为python从0开始编号，而文件是从1开始计数。所以减1</span>
+    j <span class="token operator">=</span> netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment"># 尾节点 #因为python从0开始编号，而文件是从1开始计数。所以减1</span>
+    Y<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span>netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token comment">#导纳矩阵中非对角元素  互导纳</span>
+    Y<span class="token punctuation">[</span>j<span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> Y<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span>  <span class="token comment">#互导纳</span>
+
+<span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#遍历每一个节点</span>
+    Y<span class="token punctuation">[</span>k<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token builtin">sum</span><span class="token punctuation">(</span>Y<span class="token punctuation">[</span>k<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">#导纳矩阵中的对角元素 (为某一行求和的负值） 自导纳为正</span>
+
+<span class="token comment">#再删除掉平衡节点所在的行与列</span>
+Y<span class="token operator">=</span>np<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>Y<span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment">#删除第26行</span>
+Y<span class="token operator">=</span>np<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>Y<span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token comment">#删除第26列</span>
+<span class="token comment">#print(Y.shape) #shape=(29,29)</span>
+
+<span class="token comment">#输出功率转移分布因子(GSDF)</span>
+X<span class="token operator">=</span>np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>inv<span class="token punctuation">(</span>Y<span class="token punctuation">)</span> <span class="token comment">#X为直流潮流下节点导纳矩阵的逆矩阵</span>
+row<span class="token operator">=</span>np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>numnodes<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token comment">#numnodes-1是因为节点导纳矩阵去掉了平衡节点 shape=1*29</span>
+
+<span class="token comment">#再次引入平衡节点的矩阵值，根据直流潮流定义ΔΘ=ΧΔP,平衡机角度始终为0，所以所有涉及平衡节点的X均为0</span>
+X<span class="token operator">=</span>np<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>X<span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> values<span class="token operator">=</span>row<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">#在第25行 插入全0行 #X.shape=(30,29)</span>
+X<span class="token operator">=</span>np<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>X<span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> values<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">#在第25列 插入全0列。 #X.shape=(30,30)</span>
+
+G<span class="token operator">=</span>np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span>branch_num<span class="token punctuation">,</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#GSDF功率转移矩阵初始化 G.shape=(41,30)</span>
+
+<span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>branch_num<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment">#遍历每一条支路</span>
+    m <span class="token operator">=</span> netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment"># 首端节点 #首节点 #因为python从0开始编号，而文件是从1开始计数。所以减1</span>
+    n <span class="token operator">=</span> netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">-</span><span class="token number">1</span> <span class="token comment">#尾节点 #因为python从0开始编号，而文件是从1开始计数。所以减1</span>
+    xk <span class="token operator">=</span> netpara<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>k<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span> <span class="token comment"># 支路k的阻抗值</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>numnodes<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment">#遍历每一个节点</span>
+        G<span class="token punctuation">[</span>k<span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>X<span class="token punctuation">[</span>m<span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">-</span> X<span class="token punctuation">[</span>n<span class="token punctuation">,</span> i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">*</span> xk <span class="token comment">#输出功率转移分布因子</span>
+
+
+<span class="token comment">#功率转移因子写入表格</span>
+G<span class="token operator">=</span>pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>G<span class="token punctuation">,</span>columns<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'节点1'</span><span class="token punctuation">,</span><span class="token string">'节点2'</span><span class="token punctuation">,</span><span class="token string">'节点3'</span><span class="token punctuation">,</span><span class="token string">'节点4'</span><span class="token punctuation">,</span><span class="token string">'节点5'</span><span class="token punctuation">,</span><span class="token string">'节点6'</span><span class="token punctuation">,</span><span class="token string">'节点7'</span><span class="token punctuation">,</span><span class="token string">'节点8'</span><span class="token punctuation">,</span><span class="token string">'节点9'</span><span class="token punctuation">,</span><span class="token string">'节点10'</span><span class="token punctuation">,</span>
+                          <span class="token string">'节点11'</span><span class="token punctuation">,</span><span class="token string">'节点12'</span><span class="token punctuation">,</span><span class="token string">'节点13'</span><span class="token punctuation">,</span><span class="token string">'节点14'</span><span class="token punctuation">,</span><span class="token string">'节点15'</span><span class="token punctuation">,</span><span class="token string">'节点16'</span><span class="token punctuation">,</span><span class="token string">'节点17'</span><span class="token punctuation">,</span><span class="token string">'节点18'</span><span class="token punctuation">,</span><span class="token string">'节点19'</span><span class="token punctuation">,</span>
+                          <span class="token string">'节点20'</span><span class="token punctuation">,</span><span class="token string">'节点21'</span><span class="token punctuation">,</span><span class="token string">'节点22'</span><span class="token punctuation">,</span><span class="token string">'节点23'</span><span class="token punctuation">,</span><span class="token string">'节点24'</span><span class="token punctuation">,</span><span class="token string">'节点25'</span><span class="token punctuation">,</span><span class="token string">'节点26'</span><span class="token punctuation">,</span><span class="token string">'节点27'</span><span class="token punctuation">,</span><span class="token string">'节点28'</span><span class="token punctuation">,</span><span class="token string">'节点29'</span><span class="token punctuation">,</span><span class="token string">'节点30'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+G<span class="token operator">=</span>pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>netpara<span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">'编号'</span><span class="token punctuation">,</span><span class="token string">'首端节点'</span><span class="token punctuation">,</span><span class="token string">'末端节点'</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>G<span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+G<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">'6机30节点的线路功率转移因子表.csv'</span><span class="token punctuation">,</span>index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+<div class="hljs-button {2}" data-title="复制" data-report-click="{&quot;spm&quot;:&quot;1001.2101.3001.4259&quot;}"></div></code><ul class="pre-numbering" style=""><li style="color: rgb(153, 153, 153);">1</li><li style="color: rgb(153, 153, 153);">2</li><li style="color: rgb(153, 153, 153);">3</li><li style="color: rgb(153, 153, 153);">4</li><li style="color: rgb(153, 153, 153);">5</li><li style="color: rgb(153, 153, 153);">6</li><li style="color: rgb(153, 153, 153);">7</li><li style="color: rgb(153, 153, 153);">8</li><li style="color: rgb(153, 153, 153);">9</li><li style="color: rgb(153, 153, 153);">10</li><li style="color: rgb(153, 153, 153);">11</li><li style="color: rgb(153, 153, 153);">12</li><li style="color: rgb(153, 153, 153);">13</li><li style="color: rgb(153, 153, 153);">14</li><li style="color: rgb(153, 153, 153);">15</li><li style="color: rgb(153, 153, 153);">16</li><li style="color: rgb(153, 153, 153);">17</li><li style="color: rgb(153, 153, 153);">18</li><li style="color: rgb(153, 153, 153);">19</li><li style="color: rgb(153, 153, 153);">20</li><li style="color: rgb(153, 153, 153);">21</li><li style="color: rgb(153, 153, 153);">22</li><li style="color: rgb(153, 153, 153);">23</li><li style="color: rgb(153, 153, 153);">24</li><li style="color: rgb(153, 153, 153);">25</li><li style="color: rgb(153, 153, 153);">26</li><li style="color: rgb(153, 153, 153);">27</li><li style="color: rgb(153, 153, 153);">28</li><li style="color: rgb(153, 153, 153);">29</li><li style="color: rgb(153, 153, 153);">30</li><li style="color: rgb(153, 153, 153);">31</li><li style="color: rgb(153, 153, 153);">32</li><li style="color: rgb(153, 153, 153);">33</li><li style="color: rgb(153, 153, 153);">34</li><li style="color: rgb(153, 153, 153);">35</li><li style="color: rgb(153, 153, 153);">36</li><li style="color: rgb(153, 153, 153);">37</li><li style="color: rgb(153, 153, 153);">38</li><li style="color: rgb(153, 153, 153);">39</li><li style="color: rgb(153, 153, 153);">40</li><li style="color: rgb(153, 153, 153);">41</li><li style="color: rgb(153, 153, 153);">42</li><li style="color: rgb(153, 153, 153);">43</li><li style="color: rgb(153, 153, 153);">44</li><li style="color: rgb(153, 153, 153);">45</li><li style="color: rgb(153, 153, 153);">46</li><li style="color: rgb(153, 153, 153);">47</li><li style="color: rgb(153, 153, 153);">48</li><li style="color: rgb(153, 153, 153);">49</li><li style="color: rgb(153, 153, 153);">50</li><li style="color: rgb(153, 153, 153);">51</li><li style="color: rgb(153, 153, 153);">52</li><li style="color: rgb(153, 153, 153);">53</li><li style="color: rgb(153, 153, 153);">54</li><li style="color: rgb(153, 153, 153);">55</li><li style="color: rgb(153, 153, 153);">56</li><li style="color: rgb(153, 153, 153);">57</li><li style="color: rgb(153, 153, 153);">58</li><li style="color: rgb(153, 153, 153);">59</li><li style="color: rgb(153, 153, 153);">60</li></ul></pre> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;求解结果见图，从图中看出25-26线路转移因子有很多1。因为26节点为参考节点，26节点相连节点只有25。意味着从其它节点注入1单位功率，最终流到25-26线路都必为1单位功率。从26号节点注入1单位功率，从26号节点流出，不经过25-26线路，所以该单元格为0。<br> <img src="https://img-blog.csdnimg.cn/391ea71d7d254ff58d0ff51ea1c654e6.png#pic_center" width="70%" height="70%"></p> 
+<hr color="#000000" size="1&quot;"> 
+<h1><a name="t8"></a><a id="_196"></a>总结</h1> 
+<p><font color="#999AAA">&nbsp;&nbsp;&nbsp;&nbsp;本文讲解了如何应用功率转移因子法求解复杂电力网络的潮流。通过计算机程序求解了某地6机30节点的电力网络的功率转移因子矩阵。编程语言MATLAB和python。<br> <img src="https://img-blog.csdnimg.cn/751ade4b3711447480eaff0fbec795b6.jpg#pic_center" alt="在这里插入图片描述"></font></p> 
+<p><font color="green">作者：电气-余登武。原创不易，禁止转载。</font><br> <img src="https://img-blog.csdnimg.cn/22e30f13ce384b8381ec7d8da17c7518.jpg#pic_center" width="30%" height="30%"></p>
+                </div><div data-report-view="{&quot;mod&quot;:&quot;1585297308_001&quot;,&quot;spm&quot;:&quot;1001.2101.3001.6548&quot;,&quot;dest&quot;:&quot;https://blog.csdn.net/kobeyu652453/article/details/119848821&quot;,&quot;extend1&quot;:&quot;pc&quot;,&quot;ab&quot;:&quot;new&quot;}"><div></div></div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-d7a94ec6ab.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-49037e4d27.css" rel="stylesheet">
+        </div>
+    </article>
+</div>
+    </main>  
+   </div>
+  </div>
+ </body>
+</html>
